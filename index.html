@@ -1,0 +1,57 @@
+<!DOCTYPE HTML>
+<html lang="en-US">
+<head>
+	<meta charset="UTF-8">
+	<title></title>
+	<link rel="stylesheet" href="css/all.min.css" />
+	<link rel="stylesheet" href="css/fontawesome.min.css" />
+	<link rel="stylesheet" href="style.css" />
+</head>
+<body onload="slider()">
+	<div class="banner">
+		<div class="slider">
+			<img src="img/1.jpg" id="sliderImg" />
+		</div>
+		<div class="overlay">
+			<div class="navbar">
+				<div class="logo">
+					<i class="fab fa-wordpress"></i>
+				</div>
+				<div class="menu"> 
+					<i class="fas fa-user-tie"></i>
+					<i class="fas fa-shopping-cart"></i>
+					<i class="fas fa-bars"></i>
+				</div>
+			</div>
+			<div class="content">
+				<h1>LET'S START DESIGN</h1>
+				<h3>Subscribe Our Chanel</h3>
+				<div>
+					<button type="button">WATCH MORE</button>
+					<button type="button" class="bth-2">SUBSCRIBE</button>
+				</div>
+			</div>
+		</div>
+	</div>
+	
+	<script> 
+		var sliderImg = document.getElementById('sliderImg');
+		var images = new Array(
+			"img/1.jpg",
+			"img/2.jpg",
+			"img/3.jpg",
+			"img/4.jpg"
+		);
+		var len = images.length;
+		var i = 0;
+		function slider(){
+			if(i>len-1){
+				i = 0;
+			}
+			sliderImg.src = images[i];
+			i++;
+			setTimeout('slider()',3000);
+		}
+	</script>
+</body>
+</html>
